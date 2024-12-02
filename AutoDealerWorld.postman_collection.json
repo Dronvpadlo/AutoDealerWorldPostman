@@ -1,0 +1,1088 @@
+{
+	"info": {
+		"_postman_id": "a75aba5a-5deb-44be-a976-92bab7c9093e",
+		"name": "AutoDealerWorld",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37154232"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Car",
+					"item": [
+						{
+							"name": "Brand",
+							"item": [
+								{
+									"name": "Model",
+									"item": [
+										{
+											"name": "PostModel",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"Camry\",\r\n    \"brandId\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8080/cars/model",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"cars",
+														"model"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetModels",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MDA5LCJleHAiOjE3MzMwODg2MDl9.fdNJUwrxNCTOaPWamPZ4AwTt3yQkHZlzqGm-BGNICCM",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/cars/model",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"cars",
+														"model"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "DeleteModelById",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/cars/model/2",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"cars",
+														"model",
+														"2"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "PutModel",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"X7\",\r\n    \"brandId\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8080/cars/model/4",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"cars",
+														"model",
+														"4"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "PatchModel",
+											"request": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"brandId\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8080/cars/model/8",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"cars",
+														"model",
+														"8"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "PostBrand",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaSBEb3Jvbnl1ayIsImlhdCI6MTczMzA4NTgwNCwiZXhwIjoxNzMzMDg5NDA0fQ.epXypchsc8FzpLT82nsHdOU-0_Dkj5UwM5bJot9OWH4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"MAZDA\",\r\n    \"models\": [\r\n        { \"name\": \"RX-7\", \"brandId\": 1 },\r\n        { \"name\": \"MX-5\", \"brandId\": 1 },\r\n        { \"name\": \"RX-8\", \"brandId\": 1 }\r\n    ],\r\n    \"cars\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/cars/brand",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cars",
+												"brand"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetBrands",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MDA5LCJleHAiOjE3MzMwODg2MDl9.fdNJUwrxNCTOaPWamPZ4AwTt3yQkHZlzqGm-BGNICCM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/cars/brand",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cars",
+												"brand"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteBrand",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MDA5LCJleHAiOjE3MzMwODg2MDl9.fdNJUwrxNCTOaPWamPZ4AwTt3yQkHZlzqGm-BGNICCM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/cars/brand/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cars",
+												"brand",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PutBrand",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MDA5LCJleHAiOjE3MzMwODg2MDl9.fdNJUwrxNCTOaPWamPZ4AwTt3yQkHZlzqGm-BGNICCM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"BMW\",\r\n    \"models\": [\r\n        { \"name\": \"Supra\", \"brandId\": 1 },\r\n        { \"name\": \"Corolla\", \"brandId\": 1 }\r\n    ],\r\n    \"cars\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/cars/brand/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cars",
+												"brand",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PatchCar",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Toyota\",\r\n    \"models\": [\r\n        { \"modelId\": 1, \"name\": \"Supra\", \"brandId\": 1 },\r\n        { \"modelId\": 2, \"name\": \"Corolla\", \"brandId\": 1 }\r\n    ],\r\n    \"cars\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/cars/brand/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cars",
+												"brand",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Region",
+							"item": [
+								{
+									"name": "GetRegions",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MTM0LCJleHAiOjE3MzMwODg3MzR9.HdFe5K6PKahACQhEM1JWh82Ft1cQ3y2N4LBjyYhO7A4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/region",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"region"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PostRegion",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaSBEb3Jvbnl1ayIsImlhdCI6MTczMzA4NTgwNCwiZXhwIjoxNzMzMDg5NDA0fQ.epXypchsc8FzpLT82nsHdOU-0_Dkj5UwM5bJot9OWH4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Galuch\",\r\n    \"code\": \"IVANO_FRANKIVSK\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/region",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"region"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteRegion",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/region/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"region",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PutRegion",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Obertyn\",\r\n    \"code\": \"IVANO_FRANKIVSK\",\r\n    \"carIds\": []\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/region/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"region",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PatchRegion",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Tlumach\",\r\n    \"code\": \"IVANO_FRANKIVSK\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/region/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"region",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GetCars",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaSBEb3Jvbnl1ayIsImlhdCI6MTczMzA4NTgwNCwiZXhwIjoxNzMzMDg5NDA0fQ.epXypchsc8FzpLT82nsHdOU-0_Dkj5UwM5bJot9OWH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cars",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaXNhIiwiaWF0IjoxNzMzMDg2ODgzLCJleHAiOjE3MzMwOTA0ODN9.1ol2CnfxqBzcJIXB5xQNgFggdvQbuh-SHGuvdPA0OlU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"brand\": {\r\n        \"brandId\": 1\r\n    },\r\n    \"model\": {\r\n        \"modelId\": 2\r\n    },\r\n    \"price\": 9000.0,\r\n    \"currency\": \"USD\",\r\n    \"year\": 2012,\r\n    \"description\": \"Great Vechicle\",\r\n    \"region\": {\r\n        \"regionId\": 1\r\n    },\r\n    \"owner\": {\r\n        \"userId\": 4\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cars",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCar",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cars/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatchCar",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"brand\": {\r\n        \"brandId\": 1\r\n    },\r\n    \"price\": 20009.0,\r\n    \"year\": 2001,\r\n    \"currency\": \"USD\",\r\n    \"region\": {\r\n        \"regionId\": 3\r\n    },\r\n    \"carStatus\": \"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cars/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PutCar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"brand\": {\r\n        \"brandId\": 1\r\n    },\r\n    \"model\":{\r\n        \"modelId\": 1\r\n    },\r\n    \"price\": 200.0,\r\n    \"year\": 2011,\r\n    \"currency\": \"USD\",\r\n    \"region\": {\r\n        \"regionId\": 2\r\n    },\r\n    \"carStatus\": \"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cars/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetFilterCar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaXNhIiwiaWF0IjoxNzMzMDg2ODgzLCJleHAiOjE3MzMwOTA0ODN9.1ol2CnfxqBzcJIXB5xQNgFggdvQbuh-SHGuvdPA0OlU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cars/filter?maxYear=2024",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "maxYear",
+											"value": "2024"
+										},
+										{
+											"key": "region",
+											"value": "tlumach",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stats",
+					"item": [
+						{
+							"name": "Views",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaXNhIiwiaWF0IjoxNzMzMDg2ODgzLCJleHAiOjE3MzMwOTA0ODN9.1ol2CnfxqBzcJIXB5xQNgFggdvQbuh-SHGuvdPA0OlU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cars/stats/views/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"stats",
+										"views",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AvgPrice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaXNhIiwiaWF0IjoxNzMzMDg2ODgzLCJleHAiOjE3MzMwOTA0ODN9.1ol2CnfxqBzcJIXB5xQNgFggdvQbuh-SHGuvdPA0OlU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cars/stats/average-price",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cars",
+										"stats",
+										"average-price"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "GetUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaSBEb3Jvbnl1ayIsImlhdCI6MTczMzA4NTgwNCwiZXhwIjoxNzMzMDg5NDA0fQ.epXypchsc8FzpLT82nsHdOU-0_Dkj5UwM5bJot9OWH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buy Premium",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFuZHJpaSIsImlhdCI6MTczMzA4NjcwNiwiZXhwIjoxNzMzMDkwMzA2fQ.C4mSb62uWb-JYXT75sXyMEgRn8gMJtRK-dUfO6XN7eI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/buy-premium/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"buy-premium",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CurrencyRate",
+					"item": [
+						{
+							"name": "PBRates",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJzdWIiOiJBYXJvblNoYXBpcm8iLCJpYXQiOjE3MzI5MjMxMzEsImV4cCI6MTczMjkyNjczMX0.3G3htNPowNH_-ITJVIHJ4tokEi1NBxbGUFLK-K0TLkI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/currencies/rates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"currencies",
+										"rates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdatePBRates",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDg1MTM0LCJleHAiOjE3MzMwODg3MzR9.HdFe5K6PKahACQhEM1JWh82Ft1cQ3y2N4LBjyYhO7A4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/currencies/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"currencies",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Roles&Permissions",
+					"item": [
+						{
+							"name": "GetPermission",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDgyMDM0LCJleHAiOjE3MzMwODU2MzR9.P6MMjrkn-z9sc5kLFHQwGhAaDxJ951cr-IlmKH2un8o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/permission",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"permission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostPermission",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/permission?name=CREATE_MODEL",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"permission"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "CREATE_MODEL"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetRoles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6IkFhcm9uaXJvIiwiaWF0IjoxNzMzMDgyMDM0LCJleHAiOjE3MzMwODU2MzR9.P6MMjrkn-z9sc5kLFHQwGhAaDxJ951cr-IlmKH2un8o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/role",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"role"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostRole",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W10sInN1YiI6Im5ld3VzZXIiLCJpYXQiOjE3MzMwNzc4MDksImV4cCI6MTczMzA4MTQwOX0.mbfAyC4BArfg8I1XftJmrfo6qKW_UTI9Sm4Gbx6WRak",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/role?name=MANAGER",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"role"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "MANAGER"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registered",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Andriisa\",\r\n    \"password\": \"Dor2727sdg\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"phoneNumber\": \"1234567890\",\r\n    \"roles\": [\"BUYER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"username\": \"Andriisa\",\r\n    \"password\": \"Dor2727sdg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
